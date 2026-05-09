@@ -16,7 +16,7 @@ export default function WhyUs() {
     <section className="relative py-28">
       <div className="container-tight">
         <SectionHeader
-          eyebrow="Why Solvix"
+          eyebrow="Why Myzonic"
           title={
             <>
               Built different. <span className="text-gradient-gold italic">Built right.</span>

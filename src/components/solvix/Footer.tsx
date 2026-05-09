@@ -7,10 +7,10 @@ export default function Footer() {
           <div className="md:col-span-5">
             <div className="flex items-center gap-2.5">
               <span className="relative inline-block h-7 w-7 rounded-lg bg-gold ring-1 ring-[hsl(var(--gold-2)/0.4)]" />
-              <span className="font-display text-xl font-bold">Solvix</span>
+              <span className="font-display text-xl font-bold">Myzonic</span>
             </div>
             <p className="mt-4 max-w-sm text-sm text-muted-foreground">
-              Solvix — Digital Done Right. A design, development and automation studio
+              Myzonic — Digital Done Right. A design, development and automation studio
               building the digital future for ambitious brands.
             </p>
           </div>
@@ -36,7 +36,7 @@ export default function Footer() {
           <FooterCol
             title="Connect"
             links={[
-              { label: "hello@solvix.studio", href: "mailto:hello@solvix.studio" },
+              { label: "hello@myzonic.studio", href: "mailto:hello@myzonic.studio" },
               { label: "Instagram", href: "#" },
               { label: "LinkedIn", href: "#" },
               { label: "Dribbble", href: "#" },
@@ -45,7 +45,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-gold-soft pt-6 text-xs text-muted-foreground md:flex-row">
-          <p>© {new Date().getFullYear()} Solvix Studio. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Myzonic Studio. All rights reserved.</p>
           <p>Crafted with obsession in Lisbon · Shipping worldwide.</p>
         </div>
       </div>

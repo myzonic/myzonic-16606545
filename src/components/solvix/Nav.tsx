@@ -36,7 +36,7 @@ export default function Nav() {
             <span className="relative inline-block h-7 w-7 rounded-lg bg-gold ring-1 ring-[hsl(var(--gold-2)/0.4)]">
               <span className="absolute inset-0 rounded-lg bg-[radial-gradient(circle_at_30%_30%,hsl(0_0%_100%/0.6),transparent_60%)]" />
             </span>
-            <span className="font-display text-xl font-bold tracking-tight">Solvix</span>
+            <span className="font-display text-xl font-bold tracking-tight">Myzonic</span>
           </a>
 
           <ul className="hidden items-center gap-1 md:flex">
