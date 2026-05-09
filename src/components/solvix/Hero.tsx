@@ -51,7 +51,7 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.25 }}
               className="col-span-12 max-w-xl text-base text-muted-foreground md:col-span-6 md:text-lg"
             >
-              Solvix is a design, development & automation studio engineering the
+              Myzonic is a design, development & automation studio engineering the
               digital future for ambitious brands. Built for speed, made to convert.
             </motion.p>
 
