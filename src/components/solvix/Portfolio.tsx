@@ -140,26 +140,130 @@ const projects: Project[] = [
     span: "md:col-span-4",
   },
   {
-    title: "Plastic Surgery Clinic",
-    category: "Health",
-    url: "https://clinicmaster.dexignzone.com/plasticsurgery/",
+    title: "A3BNB",
+    category: "Travel",
+    url: "https://a3bnb.vet/",
     description:
-      "Cosmetic and reconstructive surgery platform focused on patient-centered care and advanced aesthetic services.",
-    hue: "from-rose-500/25 via-fuchsia-300/10 to-transparent",
+      "Exclusive Airbnb-style travel platform for verified military, law enforcement, firefighters and first responders. 100% veteran-owned.",
+    hue: "from-blue-500/25 via-indigo-300/10 to-transparent",
+    span: "md:col-span-6",
+  },
+  {
+    title: "Conex Hub",
+    category: "Logistics",
+    url: "https://www.conexhub.com/",
+    description:
+      "Shipping container sales, leasing, delivery and modification across the United States with nationwide logistics coverage.",
+    hue: "from-amber-500/25 via-orange-300/10 to-transparent",
+    span: "md:col-span-6",
+  },
+  {
+    title: "Thoughtful Dots",
+    category: "Wellness",
+    url: "https://thoughtful-dots.vercel.app/",
+    description:
+      "Mindfulness and mandala art platform offering meditative classes, original artwork, dotting tools and creative healing experiences.",
+    hue: "from-fuchsia-500/25 via-violet-300/10 to-transparent",
+    span: "md:col-span-4",
+  },
+  {
+    title: "Transcendent Spaces",
+    category: "Wellness",
+    url: "https://transcendent-spaces.vercel.app/",
+    description:
+      "Immersive wellness experiences combining sound, breathwork and reflective practices inspired by neuroscience and contemplative traditions.",
+    hue: "from-purple-500/25 via-indigo-300/10 to-transparent",
+    span: "md:col-span-4",
+  },
+  {
+    title: "DW² Transportation",
+    category: "Transportation",
+    url: "https://dw2-wheat.vercel.app/",
+    description:
+      "Luxury transportation service in Idaho specializing in wine tours, airport transfers and premium scenic travel experiences.",
+    hue: "from-yellow-500/25 via-amber-300/10 to-transparent",
+    span: "md:col-span-4",
+  },
+  {
+    title: "Crimson Foot Care",
+    category: "Health",
+    url: "https://crimson-footcare.vercel.app/",
+    description:
+      "Professional podiatry clinic in Birmingham, Alabama specializing in diabetic foot care, fungal nail treatments and conservative care.",
+    hue: "from-red-500/25 via-rose-300/10 to-transparent",
+    span: "md:col-span-7",
+  },
+  {
+    title: "Francisco Vidal",
+    category: "Art",
+    url: "https://francisco-vidal.vercel.app/",
+    description:
+      "Contemporary figurative artist exploring identity, diaspora, memory and cultural storytelling through paintings and exhibitions.",
+    hue: "from-orange-500/25 via-rose-300/10 to-transparent",
+    span: "md:col-span-5",
+  },
+  {
+    title: "Limar Trolley Rental",
+    category: "Transportation",
+    url: "https://limar-trolley-rental.vercel.app/",
+    description:
+      "Premium luxury party trolley rental delivering entertainment, comfort and memorable celebration experiences on the move.",
+    hue: "from-pink-500/25 via-rose-300/10 to-transparent",
+    span: "md:col-span-5",
+  },
+  {
+    title: "EZNY Brokerage",
+    category: "Finance",
+    url: "https://ezny-brokerage.vercel.app/",
+    description:
+      "Early-stage financial brokerage platform with future expansion planned for investment and financial services.",
+    hue: "from-emerald-500/25 via-cyan-300/10 to-transparent",
+    span: "md:col-span-7",
+  },
+  {
+    title: "MusiX Infinity",
+    category: "Education",
+    url: "https://app-musixinfinity.vercel.app/",
+    description:
+      "Multi-role music education and management app for students, teachers and admins with role-based dashboards. Demo logins: student.sub@example.com / teacher@example.com / admin@gmail.com (pwd: 12345678).",
+    hue: "from-violet-500/25 via-fuchsia-300/10 to-transparent",
+    span: "md:col-span-6",
+  },
+  {
+    title: "Game Day Transportation",
+    category: "Transportation",
+    url: "https://www.gamedaytransportation.com/",
+    description:
+      "Event shuttle service to Hard Rock Stadium in Miami Gardens, Florida — including FIFA World Cup 2026 group transportation.",
+    hue: "from-orange-500/25 via-amber-300/10 to-transparent",
+    span: "md:col-span-6",
+  },
+  {
+    title: "Ann Photography",
+    category: "Art",
+    url: "https://ann-photography-cd44.vercel.app/",
+    description:
+      "Personal photography portfolio showcasing creative work and visual storytelling from a retired professional photographer.",
+    hue: "from-slate-400/25 via-stone-300/10 to-transparent",
     span: "md:col-span-12",
   },
 ];
 
 const categories = [
   "All",
+  "Travel",
+  "Wellness",
+  "Transportation",
+  "Health",
+  "Art",
+  "Finance",
+  "Education",
   "Therapy",
   "Logistics",
-  "Health",
   "Industrial",
   "Legal",
   "Real Estate",
   "Business",
-  "Education",
   "Kids",
   "Construction",
 ];
