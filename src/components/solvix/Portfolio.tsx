@@ -14,135 +14,154 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "A3BNB",
-    category: "Travel",
-    url: "https://a3bnb.vet/",
+    title: "Mindycoach",
+    category: "Therapy",
+    url: "https://html.xpressbuddy.com/mindycoach/",
     description:
-      "Exclusive Airbnb-style travel platform for verified military, law enforcement, firefighters and first responders. 100% veteran-owned with community-only stays and reduced fees.",
+      "Therapy & counseling platform focused on anxiety, trauma recovery, mindfulness, CBT, EMDR and compassionate emotional wellness.",
+    hue: "from-violet-500/25 via-fuchsia-300/10 to-transparent",
+    span: "md:col-span-7",
+  },
+  {
+    title: "Cargon",
+    category: "Logistics",
+    url: "https://unifato.com/cargon/",
+    description:
+      "Logistics & transportation company providing freight, transportation management and end-to-end supply chain solutions.",
+    hue: "from-orange-500/25 via-yellow-300/10 to-transparent",
+    span: "md:col-span-5",
+  },
+  {
+    title: "Resox",
+    category: "Health",
+    url: "https://azim.commonsupport.com/Resox/",
+    description:
+      "Physiotherapy & chiropractic clinic specializing in rehabilitation, chiropractic care, recovery treatments and patient wellness.",
+    hue: "from-emerald-400/25 via-teal-300/10 to-transparent",
+    span: "md:col-span-5",
+  },
+  {
+    title: "Bulidy",
+    category: "Industrial",
+    url: "https://weblayout.mnsithub.com/html/webplateone/bulidy/",
+    description:
+      "Industrial & manufacturing company focused on automation, advanced production systems and modern industrial solutions.",
     hue: "from-amber-500/30 via-yellow-300/10 to-transparent",
     span: "md:col-span-7",
   },
   {
-    title: "Drink Jubi",
-    category: "Wellness",
-    url: "https://drinkjubi.com/",
+    title: "Regalis",
+    category: "Legal",
+    url: "https://madebydesignesia.com/themes/regalis/",
     description:
-      "Wellness brand offering natural kratom-based shots and tablets for energy, focus, relaxation and mood — plant-based, lab-tested and made in the USA.",
-    hue: "from-emerald-400/25 via-yellow-200/10 to-transparent",
-    span: "md:col-span-5",
-  },
-  {
-    title: "Gard’nClean",
-    category: "Health",
-    url: "https://gardnclean.com/",
-    description:
-      "Chlorine dioxide-based sanitation solutions for agriculture and indoor cultivation — eliminating bacteria, mold, viruses and pathogens across surfaces, water and air.",
-    hue: "from-cyan-400/25 via-emerald-300/10 to-transparent",
-    span: "md:col-span-5",
-  },
-  {
-    title: "Conex Hub",
-    category: "Logistics",
-    url: "https://www.conexhub.com/",
-    description:
-      "Nationwide shipping container sales, leasing, delivery and customization for commercial and industrial clients across California, Arizona and beyond.",
-    hue: "from-orange-500/25 via-yellow-300/10 to-transparent",
-    span: "md:col-span-7",
-  },
-  {
-    title: "Thoughtful Dots",
-    category: "Art",
-    url: "https://thoughtful-dots.vercel.app/",
-    description:
-      "Mindfulness and creative platform centered on mandala art, meditation and intentional creation practices for healing, presence and reflection.",
-    hue: "from-rose-400/25 via-fuchsia-300/10 to-transparent",
-    span: "md:col-span-4",
-  },
-  {
-    title: "Transcendent Spaces",
-    category: "Wellness",
-    url: "https://transcendent-spaces.vercel.app/",
-    description:
-      "Immersive digital experience platform blending sound, storytelling, breathwork and reflection-based journeys for emotional restoration and clarity.",
-    hue: "from-violet-500/25 via-indigo-300/10 to-transparent",
-    span: "md:col-span-4",
-  },
-  {
-    title: "DW² Transportation",
-    category: "Transportation",
-    url: "https://dw2-wheat.vercel.app/",
-    description:
-      "Luxury transportation in Idaho offering wine tours, airport transfers and custom scenic travel — focused on comfort and premium service.",
+      "Professional law firm and legal services platform delivering strategic counsel and confident legal representation.",
     hue: "from-yellow-500/30 via-amber-300/10 to-transparent",
     span: "md:col-span-4",
   },
   {
-    title: "Crimson Foot Care",
-    category: "Health",
-    url: "https://crimson-footcare.vercel.app/",
+    title: "Legalt",
+    category: "Legal",
+    url: "https://html.vikinglab.agency/legalt/",
     description:
-      "Birmingham, Alabama podiatry clinic specializing in conservative treatment of foot and ankle conditions, diabetic care and chronic pain management.",
-    hue: "from-red-500/25 via-rose-300/10 to-transparent",
-    span: "md:col-span-6",
-  },
-  {
-    title: "Francisco Vidal",
-    category: "Art",
-    url: "https://francisco-vidal.vercel.app/",
-    description:
-      "Portfolio of a New York-based contemporary figurative artist exploring identity, diaspora, memory and cultural storytelling through painting and drawing.",
-    hue: "from-fuchsia-500/25 via-amber-200/10 to-transparent",
-    span: "md:col-span-6",
-  },
-  {
-    title: "Electric Sun",
-    category: "Beauty",
-    url: "https://electric-sun.vercel.app/",
-    description:
-      "Salon, spa and boutique in Fernley, Nevada offering hair, skincare, massage, tanning and wellness retail in a modern beauty environment.",
-    hue: "from-orange-400/30 via-yellow-300/10 to-transparent",
-    span: "md:col-span-5",
-  },
-  {
-    title: "EZNY Brokerage",
-    category: "Finance",
-    url: "https://ezny-brokerage.vercel.app/",
-    description:
-      "Early-stage financial services platform under active development — laying the foundation for future brokerage and investment services.",
-    hue: "from-emerald-500/25 via-teal-300/10 to-transparent",
-    span: "md:col-span-3",
-  },
-  {
-    title: "MusiX Infinity",
-    category: "Education",
-    url: "https://app-musixinfinity.vercel.app",
-    description:
-      "Multi-role music education platform for students, teachers and administrators with structured learning tools, dashboards and role-based access.",
+      "Modern attorney and legal consultation platform focused on flexibility and client-centered legal strategy.",
     hue: "from-indigo-500/25 via-violet-300/10 to-transparent",
     span: "md:col-span-4",
   },
   {
-    title: "Game Day Transportation",
-    category: "Transportation",
-    url: "https://www.gamedaytransportation.com/",
+    title: "Hosue",
+    category: "Real Estate",
+    url: "https://unifato.com/hosue/",
     description:
-      "Event shuttle service to Hard Rock Stadium in Miami Gardens, Florida — group travel and stadium shuttles for major events including FIFA World Cup 2026.",
+      "Luxury real estate platform showcasing premium properties, architecture and high-end living experiences.",
+    hue: "from-rose-400/25 via-amber-200/10 to-transparent",
+    span: "md:col-span-4",
+  },
+  {
+    title: "Lawsy",
+    category: "Legal",
+    url: "https://unifato.com/lawsy/demo/index.html",
+    description:
+      "Criminal defense law platform emphasizing expert legal protection and personalized defense strategies.",
+    hue: "from-red-500/25 via-rose-300/10 to-transparent",
+    span: "md:col-span-6",
+  },
+  {
+    title: "Eolexi",
+    category: "Business",
+    url: "https://bracketweb.com/eolexi-php/index-2.php",
+    description:
+      "Business consulting and finance platform offering strategic planning, advisory services and IT consulting.",
+    hue: "from-cyan-400/25 via-emerald-300/10 to-transparent",
+    span: "md:col-span-6",
+  },
+  {
+    title: "Escul",
+    category: "Education",
+    url: "https://html.themehour.net/escul/demo/home-5.html",
+    description:
+      "Online education platform delivering digital learning, interactive courses and remote education experiences.",
     hue: "from-sky-500/25 via-cyan-300/10 to-transparent",
+    span: "md:col-span-5",
+  },
+  {
+    title: "Kidscamp",
+    category: "Kids",
+    url: "https://demo.themeim.com/html/kidscamp/",
+    description:
+      "Kids educational and activity platform focused on creativity, child development, safety and engaging learning.",
+    hue: "from-fuchsia-500/25 via-amber-200/10 to-transparent",
+    span: "md:col-span-3",
+  },
+  {
+    title: "Kidso",
+    category: "Kids",
+    url: "https://htmldemo.zcubethemes.com/kidso/",
+    description:
+      "Modern children's learning platform promoting fun education, creativity and developmental growth.",
+    hue: "from-pink-400/25 via-orange-200/10 to-transparent",
+    span: "md:col-span-4",
+  },
+  {
+    title: "Conbiz",
+    category: "Construction",
+    url: "https://winsfolio.net/html/conbiz/service.html",
+    description:
+      "Construction and engineering services platform highlighting quality infrastructure and building expertise.",
+    hue: "from-orange-400/30 via-yellow-300/10 to-transparent",
+    span: "md:col-span-4",
+  },
+  {
+    title: "Medixi",
+    category: "Health",
+    url: "https://html.vecurosoft.com/medixi/",
+    description:
+      "Healthcare and medical platform focused on patient care, treatment solutions and healthy living.",
+    hue: "from-emerald-500/25 via-teal-300/10 to-transparent",
+    span: "md:col-span-4",
+  },
+  {
+    title: "Plastic Surgery Clinic",
+    category: "Health",
+    url: "https://clinicmaster.dexignzone.com/plasticsurgery/",
+    description:
+      "Cosmetic and reconstructive surgery platform focused on patient-centered care and advanced aesthetic services.",
+    hue: "from-rose-500/25 via-fuchsia-300/10 to-transparent",
     span: "md:col-span-12",
   },
 ];
 
 const categories = [
   "All",
-  "Travel",
-  "Wellness",
-  "Health",
+  "Therapy",
   "Logistics",
+  "Health",
+  "Industrial",
+  "Legal",
+  "Real Estate",
+  "Business",
   "Education",
-  "Art",
-  "Transportation",
-  "Finance",
-  "Beauty",
+  "Kids",
+  "Construction",
 ];
 
 function PreviewCard({ p }: { p: Project }) {
