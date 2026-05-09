@@ -11,6 +11,7 @@ import Testimonials from "@/components/solvix/Testimonials";
 import FAQ from "@/components/solvix/FAQ";
 import ContactCTA from "@/components/solvix/ContactCTA";
 import Footer from "@/components/solvix/Footer";
+import Btn3DToggle from "@/components/solvix/Btn3DToggle";
 import { useEffect } from "react";
 
 const Index = () => {
@@ -60,6 +61,7 @@ const Index = () => {
       <FAQ />
       <ContactCTA />
       <Footer />
+      <Btn3DToggle />
     </main>
   );
 };
