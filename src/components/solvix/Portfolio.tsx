@@ -219,7 +219,7 @@ export default function Portfolio() {
                 Work that <span className="text-gradient-gold italic">moves</span> the metric.
               </>
             }
-            desc="Real client projects across travel, wellness, health, logistics, art, transportation, finance and beauty. Click any card to preview the live site inside the studio."
+            desc="Real-world projects across therapy, logistics, health, legal, real estate, education, kids and construction. Click any card to preview the live site inside the studio."
           />
           <a
             href="#contact"
