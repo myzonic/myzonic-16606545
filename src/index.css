@@ -73,9 +73,32 @@
   }
 
   .dark {
-    /* Single dark theme — same tokens */
     --background: 0 0% 4%;
     --foreground: 40 25% 96%;
+  }
+
+  html.light {
+    --background: 40 30% 97%;
+    --foreground: 0 0% 8%;
+    --card: 40 25% 99%;
+    --card-foreground: 0 0% 8%;
+    --popover: 40 25% 99%;
+    --popover-foreground: 0 0% 8%;
+    --secondary: 40 15% 92%;
+    --secondary-foreground: 0 0% 8%;
+    --muted: 40 15% 92%;
+    --muted-foreground: 0 0% 35%;
+    --border: 41 30% 78%;
+    --input: 40 15% 95%;
+    --surface: 40 25% 98%;
+    --surface-2: 40 20% 95%;
+    --surface-3: 40 18% 92%;
+    --ink: 40 30% 99%;
+  }
+  html.light body {
+    background-image:
+      radial-gradient(80% 50% at 50% -10%, hsl(var(--gold-2) / 0.15), transparent 60%),
+      radial-gradient(40% 30% at 90% 30%, hsl(var(--gold-1) / 0.08), transparent 70%);
   }
 }
 
