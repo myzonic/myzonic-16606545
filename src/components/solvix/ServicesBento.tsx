@@ -106,7 +106,7 @@ export default function ServicesBento() {
               A studio for the <span className="text-gradient-gold italic">whole</span> stack.
             </>
           }
-          desc="Design, development, marketing, creative and automation — under one roof, sharing one north star: results."
+          desc="Design, development, marketing, creative and automation - under one roof, sharing one north star: results."
         />
 
         <div className="mt-14 grid grid-cols-2 gap-4 md:grid-cols-6 md:gap-5">

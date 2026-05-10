@@ -8,7 +8,7 @@ const steps = [
   { n: "03", title: "Design", desc: "Brand systems, UX flows and prototypes engineered for clarity.", icon: <Palette className="h-5 w-5" /> },
   { n: "04", title: "Build", desc: "Production-grade engineering with weekly demos and zero surprises.", icon: <Wrench className="h-5 w-5" /> },
   { n: "05", title: "Launch", desc: "QA, performance budgets and a polished go-live people remember.", icon: <Rocket className="h-5 w-5" /> },
-  { n: "06", title: "Scale", desc: "Measure, experiment and grow — paid, organic and product-led.", icon: <TrendingUp className="h-5 w-5" /> },
+  { n: "06", title: "Scale", desc: "Measure, experiment and grow - paid, organic and product-led.", icon: <TrendingUp className="h-5 w-5" /> },
 ];
 
 export default function Process() {
@@ -19,7 +19,7 @@ export default function Process() {
           eyebrow="Process"
           title={
             <>
-              From discovery to launch — <span className="text-gradient-gold italic">on rails</span>.
+              From discovery to launch - <span className="text-gradient-gold italic">on rails</span>.
             </>
           }
           desc="A six-stage system that keeps work moving, stakeholders aligned and momentum high."

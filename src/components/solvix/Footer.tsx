@@ -10,7 +10,7 @@ export default function Footer() {
               <span className="font-display text-xl font-bold">Myzonic</span>
             </div>
             <p className="mt-4 max-w-sm text-sm text-muted-foreground">
-              Myzonic — Digital Done Right. A design, development and automation studio
+              Myzonic - Digital Done Right. A design, development and automation studio
               building the digital future for ambitious brands.
             </p>
           </div>

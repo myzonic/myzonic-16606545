@@ -4,7 +4,7 @@ import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Myzonic didn't just redesign our product — they re-architected how we ship. Six weeks in, our activation jumped 38%.",
+    quote: "Myzonic didn't just redesign our product - they re-architected how we ship. Six weeks in, our activation jumped 38%.",
     name: "Léa Marchand",
     role: "VP Product, Aurum Finance",
     initial: "L",

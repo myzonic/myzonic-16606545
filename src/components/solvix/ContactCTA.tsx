@@ -14,7 +14,7 @@ export default function ContactCTA() {
     await new Promise((r) => setTimeout(r, 700));
     setSubmitting(false);
     (e.target as HTMLFormElement).reset();
-    toast.success("Thanks — we'll be in touch within 24h.", {
+    toast.success("Thanks - we'll be in touch within 24h.", {
       description: "A senior strategist will personally reply to your brief.",
     });
   };
@@ -91,7 +91,7 @@ export default function ContactCTA() {
                   name="message"
                   required
                   rows={5}
-                  placeholder="Goals, timelines, links — whatever helps us understand the brief."
+                  placeholder="Goals, timelines, links - whatever helps us understand the brief."
                   className="mt-2 w-full rounded-2xl border border-gold-soft bg-[hsl(var(--input))] px-4 py-3 text-sm outline-none transition-colors focus:border-[hsl(var(--gold-2)/0.7)] focus:ring-1 focus:ring-[hsl(var(--gold-2)/0.4)]"
                 />
               </div>

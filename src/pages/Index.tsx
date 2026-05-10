@@ -16,7 +16,7 @@ import { useEffect } from "react";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Myzonic — Digital Done Right";
+    document.title = "Myzonic - Digital Done Right";
     const setMeta = (name: string, content: string, attr: "name" | "property" = "name") => {
       let el = document.querySelector(`meta[${attr}="${name}"]`) as HTMLMetaElement | null;
       if (!el) {
@@ -30,7 +30,7 @@ const Index = () => {
       "description",
       "Myzonic is a premium design, development & AI automation studio. Web, mobile, paid ads and brand systems for ambitious companies."
     );
-    setMeta("og:title", "Myzonic — Digital Done Right", "property");
+    setMeta("og:title", "Myzonic - Digital Done Right", "property");
     setMeta(
       "og:description",
       "Premium design, development & AI automation studio building the digital future for ambitious brands.",

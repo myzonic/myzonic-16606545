@@ -5,7 +5,7 @@ const features = [
   {
     tag: "Featured · Automation",
     title: "AI Automation",
-    desc: "Deploy AI agents and workflows that handle ops, support and growth — 24/7, with zero overhead.",
+    desc: "Deploy AI agents and workflows that handle ops, support and growth - 24/7, with zero overhead.",
     bullets: ["Custom GPT agents", "Make.com & n8n flows", "CRM + data sync", "Voice & chat AI"],
     icon: <Bot className="h-5 w-5" />,
     visual: <AutomationVisual />,

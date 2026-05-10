@@ -24,7 +24,7 @@ export default function Hero() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[hsl(var(--gold-2))] opacity-60" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-gold" />
               </span>
-              <span className="text-muted-foreground">Now booking Q3 — design, dev & automation</span>
+              <span className="text-muted-foreground">Now booking Q3 - design, dev & automation</span>
             </motion.div>
           </div>
 

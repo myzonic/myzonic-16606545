@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     q: "Do you work with existing teams?",
-    a: "Absolutely. We embed with in-house designers, developers and marketers — bringing senior firepower, not friction.",
+    a: "Absolutely. We embed with in-house designers, developers and marketers - bringing senior firepower, not friction.",
   },
   {
     q: "Which platforms do you specialise in?",
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: "Do you handle ongoing growth?",
-    a: "Yes — paid ads, SEO, CRO and AI automation are all in-house. Many clients keep us on monthly to compound results post-launch.",
+    a: "Yes - paid ads, SEO, CRO and AI automation are all in-house. Many clients keep us on monthly to compound results post-launch.",
   },
   {
     q: "What size companies do you work with?",
