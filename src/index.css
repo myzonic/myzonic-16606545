@@ -4,7 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Myzonic — Black & Glossy Gold design system. All colors HSL. */
+/* Myzonic - Black & Glossy Gold design system. All colors HSL. */
 
 @layer base {
   :root {
@@ -73,9 +73,32 @@
   }
 
   .dark {
-    /* Single dark theme — same tokens */
     --background: 0 0% 4%;
     --foreground: 40 25% 96%;
+  }
+
+  html.light {
+    --background: 40 30% 97%;
+    --foreground: 0 0% 8%;
+    --card: 40 25% 99%;
+    --card-foreground: 0 0% 8%;
+    --popover: 40 25% 99%;
+    --popover-foreground: 0 0% 8%;
+    --secondary: 40 15% 92%;
+    --secondary-foreground: 0 0% 8%;
+    --muted: 40 15% 92%;
+    --muted-foreground: 0 0% 35%;
+    --border: 41 30% 78%;
+    --input: 40 15% 95%;
+    --surface: 40 25% 98%;
+    --surface-2: 40 20% 95%;
+    --surface-3: 40 18% 92%;
+    --ink: 40 30% 99%;
+  }
+  html.light body {
+    background-image:
+      radial-gradient(80% 50% at 50% -10%, hsl(var(--gold-2) / 0.15), transparent 60%),
+      radial-gradient(40% 30% at 90% 30%, hsl(var(--gold-1) / 0.08), transparent 70%);
   }
 }
 
@@ -187,8 +210,8 @@
 .animate-marquee { animation: marquee 40s linear infinite; }
 .animate-pulse-gold { animation: pulse-gold 2.4s ease-out infinite; }
 
-/* === 3D Embossed Buttons (toggleable via html.btn3d) === */
-html.btn3d .bg-gold {
+/* === 3D Embossed Buttons (always on) === */
+.bg-gold {
   box-shadow:
     inset 0 1px 0 hsl(0 0% 100% / 0.55),
     inset 0 -2px 0 hsl(0 0% 0% / 0.35),
@@ -198,16 +221,16 @@ html.btn3d .bg-gold {
   text-shadow: 0 1px 0 hsl(0 0% 100% / 0.25);
   transition: transform .12s ease, box-shadow .12s ease, filter .12s ease;
 }
-html.btn3d .bg-gold:hover { transform: translateY(-1px); filter: brightness(1.05); }
-html.btn3d .bg-gold:active {
+.bg-gold:hover { transform: translateY(-1px); filter: brightness(1.05); }
+.bg-gold:active {
   transform: translateY(1px);
   box-shadow:
     inset 0 2px 4px hsl(0 0% 0% / 0.45),
     inset 0 -1px 0 hsl(0 0% 100% / 0.2),
     0 1px 2px hsl(0 0% 0% / 0.4);
 }
-html.btn3d a[class*="border-gold-soft"],
-html.btn3d button[class*="border-gold-soft"] {
+a[class*="border-gold-soft"],
+button[class*="border-gold-soft"] {
   background-image: linear-gradient(180deg, hsl(0 0% 100% / 0.06), hsl(0 0% 0% / 0.25));
   box-shadow:
     inset 0 1px 0 hsl(0 0% 100% / 0.18),
@@ -215,10 +238,10 @@ html.btn3d button[class*="border-gold-soft"] {
     0 4px 10px -3px hsl(0 0% 0% / 0.55);
   transition: transform .12s ease, box-shadow .12s ease;
 }
-html.btn3d a[class*="border-gold-soft"]:hover,
-html.btn3d button[class*="border-gold-soft"]:hover { transform: translateY(-1px); }
-html.btn3d a[class*="border-gold-soft"]:active,
-html.btn3d button[class*="border-gold-soft"]:active {
+a[class*="border-gold-soft"]:hover,
+button[class*="border-gold-soft"]:hover { transform: translateY(-1px); }
+a[class*="border-gold-soft"]:active,
+button[class*="border-gold-soft"]:active {
   transform: translateY(1px);
   box-shadow:
     inset 0 2px 4px hsl(0 0% 0% / 0.5),

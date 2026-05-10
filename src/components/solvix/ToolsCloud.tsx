@@ -86,7 +86,7 @@ export default function ToolsCloud() {
               The full <span className="text-gradient-gold italic">toolkit</span>, fluently.
             </>
           }
-          desc="From CMS to AI, design to motion — we work natively with the tools your team already trusts."
+          desc="From CMS to AI, design to motion - we work natively with the tools your team already trusts."
         />
 
         <div className="mt-14 space-y-8">

@@ -4,7 +4,7 @@ import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Myzonic didn't just redesign our product — they re-architected how we ship. Six weeks in, our activation jumped 38%.",
+    quote: "Myzonic didn't just redesign our product - they re-architected how we ship. Six weeks in, our activation jumped 38%.",
     name: "Léa Marchand",
     role: "VP Product, Aurum Finance",
     initial: "L",
@@ -27,6 +27,24 @@ const testimonials = [
     role: "CMO, Verde Hospitality",
     initial: "M",
   },
+  {
+    quote: "A genuinely strategic partner. They translated complex safety operations into a clean digital experience that our teams actually use every day.",
+    name: "Scott Seppers",
+    role: "Trivent Safety Consulting",
+    initial: "S",
+  },
+  {
+    quote: "Sharp, fast, and deeply technical. They understood our enterprise requirements immediately and delivered a platform built to scale across regions.",
+    name: "Sean Heieck",
+    role: "Director, Law Enforcement Major Accounts (Western US), Flock Safety",
+    initial: "S",
+  },
+  {
+    quote: "Rare combination of taste, engineering depth and business sense. Myzonic ships work that holds up at the boardroom level.",
+    name: "Larry Clopp",
+    role: "Board Member, Ancient Organics Bioscience",
+    initial: "L",
+  },
 ];
 
 export default function Testimonials() {
@@ -43,6 +61,7 @@ export default function Testimonials() {
 
   return (
     <section
+      id="reviews"
       className="relative overflow-hidden py-28"
       style={{ background: "linear-gradient(180deg, hsl(0 0% 2%) 0%, hsl(0 0% 4%) 100%)" }}
     >

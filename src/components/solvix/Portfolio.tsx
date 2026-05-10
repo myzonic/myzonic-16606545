@@ -234,7 +234,7 @@ const projects: Project[] = [
     category: "Transportation",
     url: "https://www.gamedaytransportation.com/",
     description:
-      "Event shuttle service to Hard Rock Stadium in Miami Gardens, Florida — including FIFA World Cup 2026 group transportation.",
+      "Event shuttle service to Hard Rock Stadium in Miami Gardens, Florida - including FIFA World Cup 2026 group transportation.",
     hue: "from-orange-500/25 via-amber-300/10 to-transparent",
     span: "md:col-span-6",
   },
