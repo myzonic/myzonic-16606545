@@ -19,8 +19,10 @@ export default function Footer() {
             title="Studio"
             links={[
               { label: "Services", href: "#services" },
-              { label: "Work", href: "#work" },
+              { label: "Work Portfolio", href: "#work" },
               { label: "Process", href: "#process" },
+              { label: "Pricing", href: "#pricing" },
+              { label: "Reviews", href: "#reviews" },
               { label: "FAQ", href: "#faq" },
             ]}
           />

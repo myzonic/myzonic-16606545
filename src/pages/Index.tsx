@@ -7,11 +7,11 @@ import Portfolio from "@/components/solvix/Portfolio";
 import Process from "@/components/solvix/Process";
 import ToolsCloud from "@/components/solvix/ToolsCloud";
 import WhyUs from "@/components/solvix/WhyUs";
+import Pricing from "@/components/solvix/Pricing";
 import Testimonials from "@/components/solvix/Testimonials";
 import FAQ from "@/components/solvix/FAQ";
 import ContactCTA from "@/components/solvix/ContactCTA";
 import Footer from "@/components/solvix/Footer";
-import Btn3DToggle from "@/components/solvix/Btn3DToggle";
 import { useEffect } from "react";
 
 const Index = () => {
@@ -28,12 +28,12 @@ const Index = () => {
     };
     setMeta(
       "description",
-      "Myzonic is a premium design, development & AI automation studio. Web, mobile, paid ads and brand systems for ambitious companies."
+      "Myzonic is a full stack digital engineering studio building websites, mobile apps, SaaS platforms, AI systems, automation and education platforms."
     );
     setMeta("og:title", "Myzonic - Digital Done Right", "property");
     setMeta(
       "og:description",
-      "Premium design, development & AI automation studio building the digital future for ambitious brands.",
+      "Custom coded systems, mobile apps, scalable platforms, and AI powered digital solutions tailored to your business.",
       "property"
     );
 
@@ -57,11 +57,11 @@ const Index = () => {
       <Process />
       <ToolsCloud />
       <WhyUs />
+      <Pricing />
       <Testimonials />
       <FAQ />
       <ContactCTA />
       <Footer />
-      <Btn3DToggle />
     </main>
   );
 };

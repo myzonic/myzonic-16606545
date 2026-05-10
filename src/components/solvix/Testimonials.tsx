@@ -43,6 +43,7 @@ export default function Testimonials() {
 
   return (
     <section
+      id="reviews"
       className="relative overflow-hidden py-28"
       style={{ background: "linear-gradient(180deg, hsl(0 0% 2%) 0%, hsl(0 0% 4%) 100%)" }}
     >
