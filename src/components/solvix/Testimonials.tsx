@@ -27,6 +27,24 @@ const testimonials = [
     role: "CMO, Verde Hospitality",
     initial: "M",
   },
+  {
+    quote: "A genuinely strategic partner. They translated complex safety operations into a clean digital experience that our teams actually use every day.",
+    name: "Scott Seppers",
+    role: "Trivent Safety Consulting",
+    initial: "S",
+  },
+  {
+    quote: "Sharp, fast, and deeply technical. They understood our enterprise requirements immediately and delivered a platform built to scale across regions.",
+    name: "Sean Heieck",
+    role: "Director, Law Enforcement Major Accounts (Western US), Flock Safety",
+    initial: "S",
+  },
+  {
+    quote: "Rare combination of taste, engineering depth and business sense. Myzonic ships work that holds up at the boardroom level.",
+    name: "Larry Clopp",
+    role: "Board Member, Ancient Organics Bioscience",
+    initial: "L",
+  },
 ];
 
 export default function Testimonials() {
