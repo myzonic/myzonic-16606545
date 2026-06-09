@@ -6,8 +6,7 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-5">
             <div className="flex items-center gap-2.5">
-              <span className="relative inline-block h-7 w-7 rounded-lg bg-gold ring-1 ring-[hsl(var(--gold-2)/0.4)]" />
-              <span className="font-display text-xl font-bold">Myzonic</span>
+              <img src="/logo.svg" alt="Myzonic" className="h-[6.25rem] w-auto" />
             </div>
             <p className="mt-4 max-w-sm text-sm text-muted-foreground">
               Myzonic - Digital Done Right. A design, development and automation studio
