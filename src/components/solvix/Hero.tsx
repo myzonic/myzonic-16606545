@@ -4,9 +4,9 @@ import { ArrowUpRight, Mail, MessageCircle, Phone, Star, MessageSquare } from "l
 const ctas = [
   { label: "Contact Us", href: "#contact", icon: <ArrowUpRight className="h-4 w-4" />, primary: true },
   { label: "Live Chat", href: "#contact", icon: <MessageCircle className="h-4 w-4" /> },
-  { label: "WhatsApp", href: "https://wa.me/10000000000", icon: <Phone className="h-4 w-4" />, external: true },
+  { label: "WhatsApp", href: "https://wa.me/16304038612", icon: <Phone className="h-4 w-4" />, external: true },
   { label: "Email", href: "mailto:hello@myzonic.studio", icon: <Mail className="h-4 w-4" /> },
-  { label: "Text Message", href: "sms:+10000000000", icon: <MessageSquare className="h-4 w-4" /> },
+  { label: "Text Message", href: "sms:+16304038612", icon: <MessageSquare className="h-4 w-4" /> },
   { label: "Reviews", href: "#reviews", icon: <Star className="h-4 w-4" /> },
 ];
 
