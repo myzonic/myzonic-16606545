@@ -24,7 +24,7 @@ import {
   siDbeaver, siRaycast,
   siPassport, siKeycloak,
   siExpo, siIonic, siTauri,
-  siPaddle, siLemonsqueezy, siCoinbase, siAdyen,
+  siPaddle, siLemonsqueezy, siCoinbase, siAdyen, siMedusa,
   siMariadb, siApachecassandra, siNeo4j,
   siAnsible, siHelm,
   siClickup, siBrevo,
@@ -119,6 +119,7 @@ const custom = {
   pipedrive: { title: "Pipedrive", hex: "20353D", path: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" },
   vscode: { title: "Visual Studio Code", hex: "007ACC", path: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" },
   aws: { title: "Amazon Web Services", hex: "FF9900", path: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" },
+  saleor: { title: "Saleor", hex: "1FD7E0", path: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" },
 };
 
 export const brandIcons = {
@@ -259,6 +260,7 @@ export const brandIcons = {
   airtable: ico(siAirtable),
   notion: ico(siNotion),
   linear: ico(siLinear),
+  vercel: ico(siVercel),
   digitalocean: ico(siDigitalocean),
   netlify: ico(siNetlify),
   cloudflare: ico(siCloudflare),
@@ -287,6 +289,8 @@ export const brandIcons = {
   ghost: ico(siGhost),
   directus: ico(siDirectus),
   payload: ico(custom.payload),
+  medusa: ico(siMedusa),
+  saleor: ico(custom.saleor),
   canva: ico(custom.canva),
   adobexd: ico(custom.adobexd),
   spline: ico(custom.spline),
