@@ -8,7 +8,7 @@ type Brand = {
 };
 
 const Svg = ({ viewBox, children, color }: { viewBox?: string; children: React.ReactNode; color?: string }) => (
-  <svg viewBox={viewBox || "0 0 24 24"} className="h-6 w-6" fill={color || "currentColor"} xmlns="http://www.w3.org/2000/svg">
+  <svg viewBox={viewBox || "0 0 24 24"} className="h-8 w-8" fill={color || "currentColor"} xmlns="http://www.w3.org/2000/svg">
     {children}
   </svg>
 );
@@ -16,7 +16,7 @@ const Svg = ({ viewBox, children, color }: { viewBox?: string; children: React.R
 const LetterIcon = ({ letter, color }: { letter: string; color: string }) => (
   <Svg viewBox="0 0 24 24" color={color}>
     <rect x="2" y="2" width="20" height="20" rx="4" fill={color} opacity="0.15" />
-    <text x="12" y="16" textAnchor="middle" fill={color} fontWeight="700" fontFamily="system-ui" fontSize={letter.length > 1 ? "11" : "14"}>{
+    <text x="12" y="16" textAnchor="middle" fill={color} fontWeight="700" fontFamily="system-ui" fontSize={letter.length > 1 ? "13" : "16"}>{
       letter
     }</text>
   </Svg>
@@ -139,21 +139,21 @@ const GoodFirmsIcon = () => (
 );
 
 const CrunchbaseIcon = () => (
-  <svg role="img" viewBox="0 0 24 24" className="h-6 w-6" fill="#0288D1" xmlns="http://www.w3.org/2000/svg">
+  <svg role="img" viewBox="0 0 24 24" className="h-8 w-8" fill="#0288D1" xmlns="http://www.w3.org/2000/svg">
     <title>Crunchbase</title>
     <path d="M21.6 0H2.4A2.41 2.41 0 000 2.4v19.2A2.41 2.41 0 002.4 24h19.2a2.41 2.41 0 002.4-2.4V2.4A2.41 2.41 0 0021.6 0zM7.045 14.465A2.11 2.11 0 009.84 13.42h1.66a3.69 3.69 0 110-1.75H9.84a2.11 2.11 0 10-2.795 2.795zm11.345.845a3.55 3.55 0 01-1.06.63 3.68 3.68 0 01-3.39-.38v.38h-1.51V5.37h1.5v4.11a3.74 3.74 0 011.8-.63H16a3.67 3.67 0 012.39 6.46zm-.223-2.766a2.104 2.104 0 11-4.207 0 2.104 2.104 0 014.207 0z"/>
   </svg>
 );
 
 const ProductHuntIcon = () => (
-  <svg role="img" viewBox="0 0 24 24" className="h-6 w-6" fill="#DA552F" xmlns="http://www.w3.org/2000/svg">
+  <svg role="img" viewBox="0 0 24 24" className="h-8 w-8" fill="#DA552F" xmlns="http://www.w3.org/2000/svg">
     <title>Product Hunt</title>
     <path d="M13.604 8.4h-3.405V12h3.405c.995 0 1.801-.806 1.801-1.801 0-.993-.805-1.799-1.801-1.799zM12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zm1.604 14.4h-3.405V18H7.801V6h5.804c2.319 0 4.2 1.88 4.2 4.199 0 2.321-1.881 4.201-4.201 4.201z"/>
   </svg>
 );
 
 const G2Icon = () => (
-  <svg role="img" viewBox="0 0 24 24" className="h-6 w-6" fill="#FF492C" xmlns="http://www.w3.org/2000/svg">
+  <svg role="img" viewBox="0 0 24 24" className="h-8 w-8" fill="#FF492C" xmlns="http://www.w3.org/2000/svg">
     <title>G2</title>
     <path d="M12 0a12 12 0 100 24 12 12 0 000-24zm.122 5.143c.45 0 .9.044 1.342.132l-1.342 2.806C9.962 8.08 8.203 9.84 8.203 12s1.76 3.92 3.92 3.92c.937 0 1.844-.338 2.553-.951l1.483 2.572A6.856 6.856 0 015.266 12a6.856 6.856 0 016.856-6.856zm3.498.49a1.262 1.262 0 01.026 0c.427 0 .792.113 1.101.34.31.229.466.546.466.946 0 .639-.36 1.03-1.035 1.376l-.377.191c-.403.204-.602.385-.657.706h2.05v.85h-3.101v-.144c0-.526.103-.96.314-1.306.211-.345.576-.65 1.102-.917l.242-.117c.427-.216.538-.401.538-.625 0-.266-.228-.458-.6-.458-.44 0-.773.228-1.004.694l-.592-.595c.13-.279.338-.502.619-.675a1.7 1.7 0 01.908-.266zm-2.094 5.388h3.394l1.697 2.937-1.697 2.94-1.697-2.94H11.83l1.696-2.937z"/>
   </svg>
