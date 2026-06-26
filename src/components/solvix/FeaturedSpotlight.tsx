@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Bot, Smartphone, TrendingUp, Check } from "lucide-react";
+import { SectionHeader } from "./ServicesBento";
 
 const features = [
   {
@@ -30,8 +31,18 @@ const features = [
 
 export default function FeaturedSpotlight() {
   return (
-    <section className="relative py-28">
-      <div className="container-tight space-y-8">
+    <section id="featured" className="relative py-28">
+      <div className="container-tight">
+        <SectionHeader
+          eyebrow="Spotlight"
+          title={
+            <>
+              Where we <span className="text-gradient-gold italic">excel</span>.
+            </>
+          }
+          desc="Three core capabilities that define our craft - AI automation, mobile engineering and performance marketing."
+        />
+        <div className="mt-14 space-y-8">
         {features.map((f, i) => (
           <motion.div
             key={f.title}
@@ -74,6 +85,7 @@ export default function FeaturedSpotlight() {
             </div>
           </motion.div>
         ))}
+      </div>
       </div>
     </section>
   );

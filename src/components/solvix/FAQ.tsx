@@ -55,7 +55,7 @@ export default function FAQ() {
                 className="overflow-hidden rounded-2xl border border-gold-soft bg-[hsl(var(--surface))] px-5 transition-colors hover:border-[hsl(var(--gold-2)/0.45)]"
               >
                 <AccordionTrigger className="py-5 text-left font-display text-lg font-semibold hover:no-underline">
-                  {f.q}
+                  <h3>{f.q}</h3>
                 </AccordionTrigger>
                 <AccordionContent className="pb-5 text-sm leading-relaxed text-muted-foreground">
                   {f.a}
