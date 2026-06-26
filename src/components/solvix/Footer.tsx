@@ -63,7 +63,7 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-gold-soft pt-6 text-xs text-muted-foreground md:flex-row">
           <p>© {new Date().getFullYear()} Myzonic Studio. All rights reserved.</p>
-          <p>Crafted with obsession in Lisbon · Shipping worldwide.</p>
+          <p className="text-center md:text-right">1603 Orrington Ave, Evanston, IL 60201</p>
         </div>
       </div>
     </footer>

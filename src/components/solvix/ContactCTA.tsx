@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowUpRight, Mail, Phone, Clock } from "lucide-react";
+import { ArrowUpRight, Mail, Phone, Clock, MapPin } from "lucide-react";
 import { toast } from "sonner";
 
 const budgets = ["< $10k", "$10k – $25k", "$25k – $75k", "$75k+"];
@@ -68,6 +68,15 @@ export default function ContactCTA() {
                   <a href="tel:+12243733224" className="font-medium hover:text-[hsl(var(--gold-3))]">
                     (224) 373-3224
                   </a>
+                </div>
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="grid h-10 w-10 place-items-center rounded-xl border border-gold-soft text-[hsl(var(--gold-3))]">
+                  <MapPin className="h-4 w-4" />
+                </span>
+                <div>
+                  <div className="text-muted-foreground text-xs uppercase tracking-wider">Address</div>
+                  <div className="font-medium">1603 Orrington Ave, Evanston, IL 60201</div>
                 </div>
               </li>
             </ul>
