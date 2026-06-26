@@ -10,6 +10,7 @@ import WhyUs from "@/components/solvix/WhyUs";
 import Pricing from "@/components/solvix/Pricing";
 import Testimonials from "@/components/solvix/Testimonials";
 import FAQ from "@/components/solvix/FAQ";
+import TrustBadges from "@/components/solvix/TrustBadges";
 import ContactCTA from "@/components/solvix/ContactCTA";
 import Footer from "@/components/solvix/Footer";
 const Index = () => {
@@ -27,6 +28,7 @@ const Index = () => {
       <Pricing />
       <Testimonials />
       <FAQ />
+      <TrustBadges />
       <ContactCTA />
       <Footer />
     </main>
