@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowUpRight, Mail, MapPin, Clock } from "lucide-react";
+import { ArrowUpRight, Mail, Phone, Clock } from "lucide-react";
 import { toast } from "sonner";
 
 const budgets = ["< $10k", "$10k – $25k", "$25k – $75k", "$75k+"];
@@ -45,8 +45,8 @@ export default function ContactCTA() {
                 </span>
                 <div>
                   <div className="text-muted-foreground text-xs uppercase tracking-wider">Email</div>
-                  <a href="mailto:hello@myzonic.studio" className="font-medium hover:text-[hsl(var(--gold-3))]">
-                    hello@myzonic.studio
+                  <a href="mailto:Myzonicllc@gmail.com" className="font-medium hover:text-[hsl(var(--gold-3))]">
+                    Myzonicllc@gmail.com
                   </a>
                 </div>
               </li>
@@ -61,11 +61,13 @@ export default function ContactCTA() {
               </li>
               <li className="flex items-center gap-3">
                 <span className="grid h-10 w-10 place-items-center rounded-xl border border-gold-soft text-[hsl(var(--gold-3))]">
-                  <MapPin className="h-4 w-4" />
+                  <Phone className="h-4 w-4" />
                 </span>
                 <div>
-                  <div className="text-muted-foreground text-xs uppercase tracking-wider">Working remotely</div>
-                  <div className="font-medium">From Lisbon · serving worldwide</div>
+                  <div className="text-muted-foreground text-xs uppercase tracking-wider">Phone</div>
+                  <a href="tel:+12243733224" className="font-medium hover:text-[hsl(var(--gold-3))]">
+                    (224) 373-3224
+                  </a>
                 </div>
               </li>
             </ul>

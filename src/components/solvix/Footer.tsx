@@ -37,7 +37,7 @@ export default function Footer() {
           <FooterCol
             title="Connect"
             links={[
-              { label: "hello@myzonic.studio", href: "mailto:hello@myzonic.studio" },
+              { label: "Myzonicllc@gmail.com", href: "mailto:Myzonicllc@gmail.com" },
               { label: "Instagram", href: "#" },
               { label: "LinkedIn", href: "#" },
               { label: "Dribbble", href: "#" },
