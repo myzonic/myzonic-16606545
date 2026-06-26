@@ -45,8 +45,8 @@ export default function ContactCTA() {
                 </span>
                 <div>
                   <div className="text-muted-foreground text-xs uppercase tracking-wider">Email</div>
-                  <a href="mailto:Myzonicllc@gmail.com" className="font-medium hover:text-[hsl(var(--gold-3))]">
-                    Myzonicllc@gmail.com
+                  <a href="mailto:Contact@myzonic.com" className="font-medium hover:text-[hsl(var(--gold-3))]">
+                    Contact@myzonic.com
                   </a>
                 </div>
               </li>

@@ -41,8 +41,8 @@ export default function Footer() {
               Connect
             </div>
             <div className="mt-4 space-y-3">
-              <a href="mailto:Myzonicllc@gmail.com" className="block text-sm text-muted-foreground transition-colors hover:text-foreground">
-                Myzonicllc@gmail.com
+              <a href="mailto:Contact@myzonic.com" className="block text-sm text-muted-foreground transition-colors hover:text-foreground">
+                Contact@myzonic.com
               </a>
               <div className="flex items-center gap-2">
                 <a href="#" aria-label="Instagram" className="grid h-9 w-9 place-items-center rounded-full border border-gold-soft text-muted-foreground transition-colors hover:border-[hsl(var(--gold-2)/0.5)] hover:text-[hsl(var(--gold-3))]">
