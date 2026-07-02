@@ -14,7 +14,7 @@ const links = [
 const socials = [
   { href: "https://linkedin.com", label: "LinkedIn", icon: <Linkedin className="h-4 w-4" /> },
   { href: "https://www.facebook.com/myzonic", label: "Facebook", icon: <Facebook className="h-4 w-4" /> },
-  { href: "https://instagram.com", label: "Instagram", icon: <Instagram className="h-4 w-4" /> },
+  { href: "https://www.instagram.com/myzonicllc", label: "Instagram", icon: <Instagram className="h-4 w-4" /> },
   {
     href: "https://tiktok.com",
     label: "TikTok",
