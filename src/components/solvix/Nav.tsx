@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Sun, Moon, Linkedin, Facebook, Instagram } from "lucide-react";
 
 const links = [
@@ -9,6 +10,13 @@ const links = [
   { href: "#pricing", label: "Pricing" },
   { href: "#reviews", label: "Reviews" },
   { href: "#faq", label: "FAQ" },
+];
+
+const pageLinks = [
+  { to: "/bookkeeping", label: "Bookkeeping" },
+  { to: "/logodesign", label: "Logo Design" },
+  { to: "/websitedesign", label: "Website Design" },
+  { to: "/graphicdesign", label: "Graphic Design" },
 ];
 
 const socials = [
@@ -32,6 +40,8 @@ export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [dark, setDark] = useState(true);
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -68,14 +78,39 @@ export default function Nav() {
           </a>
 
           <ul className="hidden items-center gap-0.5 lg:flex">
-            {links.map((l) => (
-              <li key={l.href}>
-                <a
-                  href={l.href}
-                  className="rounded-full px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+            {isHome
+              ? links.map((l) => (
+                  <li key={l.href}>
+                    <a
+                      href={l.href}
+                      className="rounded-full px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+                    >
+                      {l.label}
+                    </a>
+                  </li>
+                ))
+              : pageLinks.map((l) => (
+                  <li key={l.to}>
+                    <Link
+                      to="/"
+                      className="rounded-full px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+                    >
+                      Home
+                    </Link>
+                  </li>
+                ))}
+            {pageLinks.map((l) => (
+              <li key={l.to}>
+                <Link
+                  to={l.to}
+                  className={`rounded-full px-3 py-2 text-sm transition-colors hover:text-foreground ${
+                    location.pathname === l.to
+                      ? "text-[hsl(var(--gold-3))]"
+                      : "text-muted-foreground"
+                  }`}
                 >
                   {l.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -121,15 +156,42 @@ export default function Nav() {
         {open && (
           <div className="mt-2 rounded-3xl glass-strong p-4 lg:hidden">
             <ul className="flex flex-col gap-1">
-              {links.map((l) => (
-                <li key={l.href}>
-                  <a
-                    href={l.href}
+              {isHome
+                ? links.map((l) => (
+                    <li key={l.href}>
+                      <a
+                        href={l.href}
+                        onClick={() => setOpen(false)}
+                        className="block rounded-xl px-4 py-3 text-sm hover:bg-white/5"
+                      >
+                        {l.label}
+                      </a>
+                    </li>
+                  ))
+                : (
+                    <li>
+                      <Link
+                        to="/"
+                        onClick={() => setOpen(false)}
+                        className="block rounded-xl px-4 py-3 text-sm hover:bg-white/5"
+                      >
+                        Home
+                      </Link>
+                    </li>
+                  )}
+              {pageLinks.map((l) => (
+                <li key={l.to}>
+                  <Link
+                    to={l.to}
                     onClick={() => setOpen(false)}
-                    className="block rounded-xl px-4 py-3 text-sm hover:bg-white/5"
+                    className={`block rounded-xl px-4 py-3 text-sm hover:bg-white/5 ${
+                      location.pathname === l.to
+                        ? "text-[hsl(var(--gold-3))]"
+                        : ""
+                    }`}
                   >
                     {l.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
               <li className="flex items-center gap-2 px-4 pt-3">

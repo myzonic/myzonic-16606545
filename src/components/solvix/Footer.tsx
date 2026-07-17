@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <footer className="relative border-t border-gold-soft pb-10 pt-16">
@@ -35,6 +37,15 @@ export default function Footer() {
             ]}
           />
           <FooterCol
+            title="Services"
+            links={[
+              { label: "Bookkeeping", href: "/bookkeeping", isRoute: true },
+              { label: "Logo Design", href: "/logodesign", isRoute: true },
+              { label: "Website Design", href: "/websitedesign", isRoute: true },
+              { label: "Graphic Design", href: "/graphicdesign", isRoute: true },
+            ]}
+          />
+          <FooterCol
             title="Connect"
             links={[
               { label: "hello@myzonic.studio", href: "mailto:hello@myzonic.studio" },
@@ -56,7 +67,7 @@ export default function Footer() {
 
 function FooterCol({
   title, links,
-}: { title: string; links: { label: string; href: string }[] }) {
+}: { title: string; links: { label: string; href: string; isRoute?: boolean }[] }) {
   return (
     <div className="md:col-span-2">
       <div className="font-display text-xs uppercase tracking-[0.22em] text-[hsl(var(--gold-3))]">
@@ -65,9 +76,15 @@ function FooterCol({
       <ul className="mt-4 space-y-2.5 text-sm">
         {links.map((l) => (
           <li key={l.label}>
-            <a href={l.href} className="text-muted-foreground transition-colors hover:text-foreground">
-              {l.label}
-            </a>
+            {l.isRoute ? (
+              <Link to={l.href} className="text-muted-foreground transition-colors hover:text-foreground">
+                {l.label}
+              </Link>
+            ) : (
+              <a href={l.href} className="text-muted-foreground transition-colors hover:text-foreground">
+                {l.label}
+              </a>
+            )}
           </li>
         ))}
       </ul>
