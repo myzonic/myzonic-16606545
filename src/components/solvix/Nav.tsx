@@ -89,8 +89,8 @@ export default function Nav() {
                     </a>
                   </li>
                 ))
-              : pageLinks.map((l) => (
-                  <li key={l.to}>
+              : (
+                  <li>
                     <Link
                       to="/"
                       className="rounded-full px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
@@ -98,7 +98,7 @@ export default function Nav() {
                       Home
                     </Link>
                   </li>
-                ))}
+                )}
             {pageLinks.map((l) => (
               <li key={l.to}>
                 <Link
