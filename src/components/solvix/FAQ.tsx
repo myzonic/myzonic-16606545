@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -9,7 +10,7 @@ import { SectionHeader } from "./ServicesBento";
 const faqs = [
   {
     q: "How fast can you start?",
-    a: "Most engagements kick off within 5–10 business days. Smaller scopes can begin in under a week.",
+    a: "Most engagements kick off within 5\u201310 business days. Smaller scopes can begin in under a week.",
   },
   {
     q: "How do you price projects?",
@@ -17,7 +18,7 @@ const faqs = [
   },
   {
     q: "Do you work with existing teams?",
-    a: "Absolutely. We embed with in-house designers, developers and marketers - bringing senior firepower, not friction.",
+    a: "Absolutely. We embed with in-house designers, developers and marketers \u2014 bringing senior firepower, not friction.",
   },
   {
     q: "Which platforms do you specialise in?",
@@ -25,7 +26,7 @@ const faqs = [
   },
   {
     q: "Do you handle ongoing growth?",
-    a: "Yes - paid ads, SEO, CRO and AI automation are all in-house. Many clients keep us on monthly to compound results post-launch.",
+    a: "Yes \u2014 paid ads, SEO, CRO and AI automation are all in-house. Many clients keep us on monthly to compound results post-launch.",
   },
   {
     q: "What size companies do you work with?",
@@ -33,7 +34,27 @@ const faqs = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 export default function FAQ() {
+  useEffect(() => {
+    const id = "faq-schema";
+    if (document.getElementById(id)) return;
+    const script = document.createElement("script");
+    script.id = id;
+    script.type = "application/ld+json";
+    script.textContent = JSON.stringify(faqSchema);
+    document.head.appendChild(script);
+    return () => { const el = document.getElementById(id); if (el) el.remove(); };
+  }, []);
   return (
     <section id="faq" className="relative py-28">
       <div className="container-tight">
@@ -55,7 +76,7 @@ export default function FAQ() {
                 className="overflow-hidden rounded-2xl border border-gold-soft bg-[hsl(var(--surface))] px-5 transition-colors hover:border-[hsl(var(--gold-2)/0.45)]"
               >
                 <AccordionTrigger className="py-5 text-left font-display text-lg font-semibold hover:no-underline">
-                  {f.q}
+                  <h3>{f.q}</h3>
                 </AccordionTrigger>
                 <AccordionContent className="pb-5 text-sm leading-relaxed text-muted-foreground">
                   {f.a}
