@@ -10,13 +10,38 @@ export default function ContactCTA() {
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
     setSubmitting(true);
-    await new Promise((r) => setTimeout(r, 700));
-    setSubmitting(false);
-    (e.target as HTMLFormElement).reset();
-    toast.success("Thanks - we'll be in touch within 24h.", {
-      description: "A senior strategist will personally reply to your brief.",
-    });
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: data.get("name"),
+          email: data.get("email"),
+          company: data.get("company"),
+          budget: data.get("budget"),
+          projectType: data.get("type"),
+          message: data.get("message"),
+          website: data.get("website"),
+        }),
+      });
+
+      if (!response.ok) throw new Error("Contact email delivery failed");
+
+      form.reset();
+      toast.success("Thanks - we'll be in touch within 24h.", {
+        description: "A senior strategist will personally reply to your brief.",
+      });
+    } catch {
+      toast.error("We couldn't send your message.", {
+        description: "Please try again or email Contact@myzonic.com directly.",
+      });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -96,6 +121,13 @@ export default function ContactCTA() {
                 <SelectField label="Budget" name="budget" options={budgets} />
               </div>
               <SelectField label="Project type" name="type" options={types} />
+              <input
+                name="website"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                className="absolute h-px w-px overflow-hidden opacity-0"
+              />
               <div>
                 <Label>Tell us about your project</Label>
                 <textarea
