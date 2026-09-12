@@ -8,6 +8,7 @@ import {
   CheckCircle2,
   CircleDollarSign,
   Code2,
+  Compass,
   ContactRound,
   FilePenLine,
   Gauge,
@@ -17,6 +18,8 @@ import {
   Puzzle,
   Smartphone,
   Sparkles,
+  Rocket,
+  ShieldCheck,
   Workflow,
   type LucideIcon,
 } from "lucide-react";
@@ -133,11 +136,20 @@ function InlineText({ text }: { text: string }) {
   );
 }
 
+const sectionId = (title: string, index: number) =>
+  `${title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}-${index + 1}`;
+
 export default function ServicePage() {
   const { slug = "" } = useParams();
   const service = getServicePage(slug);
   const markdown = serviceContent[`../content/services/${slug}.md`];
   const blocks = useMemo(() => parseMarkdown(markdown ?? ""), [markdown]);
+  const sections = useMemo(
+    () => blocks
+      .map((block, index) => block.type === "h2" ? { title: block.text, blockIndex: index } : null)
+      .filter((section): section is { title: string; blockIndex: number } => section !== null),
+    [blocks],
+  );
   const visual = serviceVisuals[slug] ?? { Icon: Sparkles, label: "Built with intent", detail: "Myzonic service" };
   const VisualIcon = visual.Icon;
 
@@ -186,6 +198,7 @@ export default function ServicePage() {
             </div>
             <ServiceVisualCard visual={visual} />
           </div>
+          <OutcomeRail />
         </div>
       </section>
 
@@ -194,25 +207,37 @@ export default function ServicePage() {
           <article className="space-y-7">
             {blocks.map((block, index) => {
               const SectionIcon = sectionIcons[index % sectionIcons.length];
-              if (block.type === "h2") return <div key={index} className="flex items-center gap-4 pt-10"><span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl border border-gold-soft bg-gold/10 text-[hsl(var(--gold-3))]"><SectionIcon className="h-5 w-5" /></span><h2 className="font-display text-3xl font-bold leading-tight md:text-4xl">{block.text}</h2></div>;
-              if (block.type === "h3") return <div key={index} className="flex items-center gap-3 pt-4"><span className="h-2 w-2 rounded-full bg-[hsl(var(--gold-3))]" /><h3 className="text-xl font-semibold md:text-2xl">{block.text}</h3></div>;
+              const sectionNumber = String(blocks.slice(0, index + 1).filter((item) => item.type === "h2").length).padStart(2, "0");
+              if (block.type === "h2") return <div id={sectionId(block.text, index)} key={index} className="scroll-mt-32 border-t border-gold-soft pt-10 first:border-0 first:pt-0"><div className="flex items-start gap-4"><span className="flex h-11 min-w-11 flex-col items-center justify-center rounded-2xl border border-gold-soft bg-gold/10 text-[hsl(var(--gold-3))]"><SectionIcon className="h-4 w-4" /><span className="mt-0.5 text-[9px] font-bold tracking-wider">{sectionNumber}</span></span><div><p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-[hsl(var(--gold-3))]">Explore</p><h2 className="font-display text-3xl font-bold leading-tight md:text-4xl">{block.text}</h2></div></div></div>;
+              if (block.type === "h3") return <div key={index} className="flex items-center gap-3 rounded-2xl bg-card/45 px-5 py-4"><span className="h-2 w-2 rounded-full bg-[hsl(var(--gold-3))] shadow-[0_0_14px_hsl(var(--gold-2))]" /><h3 className="text-xl font-semibold md:text-2xl">{block.text}</h3></div>;
               if (block.type === "p") return <p key={index} className="max-w-3xl text-[1.02rem] leading-8 text-muted-foreground"><InlineText text={block.text} /></p>;
               if (block.type === "list") return <ul key={index} className="grid gap-3 sm:grid-cols-2">{block.items.map((item, itemIndex) => <li key={item} className="group rounded-2xl border border-gold-soft bg-card/40 p-4 transition-transform duration-300 hover:-translate-y-1 hover:border-[hsl(var(--gold-2)/0.5)]"><span className="mb-3 grid h-8 w-8 place-items-center rounded-xl bg-gold/10 text-[hsl(var(--gold-3))]"><CheckCircle2 className="h-4 w-4" /></span><span className="block text-sm leading-6 text-muted-foreground"><InlineText text={item} /></span><span className="sr-only">Feature {itemIndex + 1}</span></li>)}</ul>;
               return <div key={index} className="h-px w-full bg-gold-soft" />;
             })}
           </article>
-          <aside className="h-fit rounded-3xl border border-gold-soft bg-card/50 p-6 lg:sticky lg:top-28">
+          <aside className="h-fit space-y-4 lg:sticky lg:top-28">
+            {sections.length > 0 && <div className="rounded-3xl border border-gold-soft bg-card/50 p-5"><p className="text-xs font-semibold uppercase tracking-[0.18em] text-[hsl(var(--gold-3))]">On this page</p><nav className="mt-4 space-y-1">{sections.map((section, index) => <a key={`${section.title}-${section.blockIndex}`} href={`#${sectionId(section.title, section.blockIndex)}`} className="flex items-start gap-3 rounded-xl px-2 py-2 text-xs leading-5 text-muted-foreground transition-colors hover:bg-white/5 hover:text-foreground"><span className="pt-0.5 font-mono text-[10px] text-[hsl(var(--gold-3))]">{String(index + 1).padStart(2, "0")}</span><span>{section.title}</span></a>)}</nav></div>}
+          <div className="rounded-3xl border border-gold-soft bg-card/50 p-6">
             <div className="grid h-12 w-12 place-items-center rounded-2xl border border-gold-soft bg-gold/10 text-[hsl(var(--gold-3))]"><VisualIcon className="h-6 w-6" /></div>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[hsl(var(--gold-3))]">Let’s build</p>
             <h2 className="mt-3 font-display text-2xl font-bold">Ready to discuss it?</h2>
             <p className="mt-3 text-sm leading-6 text-muted-foreground">Tell us what you need. We’ll help you define a practical next step.</p>
             <a href="/#contact" className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full border border-gold-soft px-4 py-3 text-sm font-semibold transition-colors hover:bg-white/5">Start a conversation <ArrowUpRight className="h-4 w-4" /></a>
-          </aside>
+          </div></aside>
         </div>
       </section>
       <Footer />
     </main>
   );
+}
+
+function OutcomeRail() {
+  const outcomes = [
+    { icon: Compass, title: "Clear direction", text: "Start with the right scope and a practical plan." },
+    { icon: Rocket, title: "Confident delivery", text: "Designed and built around your real-world needs." },
+    { icon: ShieldCheck, title: "Built to last", text: "A thoughtful foundation for the next stage of growth." },
+  ];
+  return <div className="mt-14 grid gap-3 border-t border-gold-soft pt-6 sm:grid-cols-3">{outcomes.map((outcome) => { const Icon = outcome.icon; return <div key={outcome.title} className="group rounded-2xl border border-transparent px-4 py-4 transition-all hover:border-gold-soft hover:bg-card/50"><Icon className="h-5 w-5 text-[hsl(var(--gold-3))]" /><p className="mt-4 font-semibold">{outcome.title}</p><p className="mt-1 text-sm leading-6 text-muted-foreground">{outcome.text}</p></div>; })}</div>;
 }
 
 function ServiceVisualCard({ visual }: { visual: ServiceVisual }) {
