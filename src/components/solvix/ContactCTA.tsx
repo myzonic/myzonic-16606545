@@ -2,8 +2,22 @@ import { useState } from "react";
 import { ArrowUpRight, Mail, Phone, Clock, MapPin } from "lucide-react";
 import { toast } from "sonner";
 
-const budgets = ["< $10k", "$10k – $25k", "$25k – $75k", "$75k+"];
-const types = ["Brand & Design", "Web / App", "AI Automation", "Paid Ads", "Other"];
+const budgets = [
+  "$100",
+  "$300",
+  "$500",
+  "$800",
+  "$1,000",
+  "$1,500",
+  "$2,000",
+  "$3,000",
+  "$5,000",
+  "$7,500",
+  "$10,000",
+  "$15,000",
+  "$20,000+",
+  "Not sure / Need a quote",
+];
 
 const contactEndpoint = ["myzonic.com", "www.myzonic.com"].includes(window.location.hostname)
   ? "https://myzonic-website.vercel.app/api/contact"
@@ -27,9 +41,8 @@ export default function ContactCTA() {
           email: data.get("email"),
           phone: data.get("phone"),
           company: data.get("company"),
-          websiteUrl: data.get("websiteUrl"),
           budget: data.get("budget"),
-          projectType: data.get("type"),
+          service: data.get("service"),
           message: data.get("message"),
           faxNumber: data.get("faxNumber"),
         }),
@@ -127,10 +140,14 @@ export default function ContactCTA() {
                 <Field label="Company" name="company" placeholder="Acme Inc." />
               </div>
               <div className="grid gap-5 md:grid-cols-2">
-                <Field label="Website URL" name="websiteUrl" type="url" placeholder="https://example.com" />
-                <SelectField label="Budget" name="budget" options={budgets} />
+                <Field
+                  label="Service interested in"
+                  name="service"
+                  required
+                  placeholder="e.g. Web design, SEO, AI automation"
+                />
+                <SelectField label="Project Budget" name="budget" options={budgets} required />
               </div>
-              <SelectField label="Service interested in" name="type" options={types} required />
               <input
                 name="faxNumber"
                 tabIndex={-1}

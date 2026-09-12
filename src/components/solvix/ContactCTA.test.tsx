@@ -22,8 +22,11 @@ const fillRequiredFields = () => {
   fireEvent.change(screen.getByPlaceholderText("+1 224 555 0123"), {
     target: { value: "+1 224 555 0199" },
   });
-  fireEvent.change(screen.getByRole("combobox", { name: /service interested in/i }), {
-    target: { value: "Web / App" },
+  fireEvent.change(screen.getByPlaceholderText("e.g. Web design, SEO, AI automation"), {
+    target: { value: "Web design and SEO" },
+  });
+  fireEvent.change(screen.getByRole("combobox", { name: /project budget/i }), {
+    target: { value: "$1,500" },
   });
   fireEvent.change(
     screen.getByPlaceholderText(
@@ -53,6 +56,8 @@ describe("ContactCTA", () => {
         body: expect.stringContaining('"email":"test@example.com"'),
       }),
     ));
+    expect(mocks.fetch.mock.calls[0][1]?.body).toContain('"service":"Web design and SEO"');
+    expect(mocks.fetch.mock.calls[0][1]?.body).toContain('"budget":"$1,500"');
     expect(mocks.success).toHaveBeenCalledOnce();
     expect(screen.getByPlaceholderText("Jane Cooper")).toHaveValue("");
   });
