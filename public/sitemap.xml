@@ -30,4 +30,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+  <url><loc>https://myzonic.com/services/payroll-services</loc><lastmod>2026-09-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://myzonic.com/services/resume-cover-letter-writing</loc><lastmod>2026-09-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://myzonic.com/services/mobile-app-development</loc><lastmod>2026-09-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://myzonic.com/services/custom-software-development</loc><lastmod>2026-09-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://myzonic.com/services/desktop-app-development</loc><lastmod>2026-09-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://myzonic.com/services/chrome-extension-development</loc><lastmod>2026-09-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://myzonic.com/services/web-application-development</loc><lastmod>2026-09-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://myzonic.com/services/ai-development</loc><lastmod>2026-09-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://myzonic.com/services/saas-development</loc><lastmod>2026-09-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://myzonic.com/services/api-integrations</loc><lastmod>2026-09-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://myzonic.com/services/business-automation</loc><lastmod>2026-09-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://myzonic.com/services/custom-crm-development</loc><lastmod>2026-09-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

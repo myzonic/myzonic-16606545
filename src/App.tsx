@@ -8,6 +8,7 @@ import Bookkeeping from "./pages/Bookkeeping.tsx";
 import LogoDesign from "./pages/LogoDesign.tsx";
 import WebsiteDesign from "./pages/WebsiteDesign.tsx";
 import GraphicDesign from "./pages/GraphicDesign.tsx";
+import ServicePage from "./pages/ServicePage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/logodesign" element={<LogoDesign />} />
           <Route path="/websitedesign" element={<WebsiteDesign />} />
           <Route path="/graphicdesign" element={<GraphicDesign />} />
+          <Route path="/services/:slug" element={<ServicePage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
