@@ -5,6 +5,10 @@ import { toast } from "sonner";
 const budgets = ["< $10k", "$10k – $25k", "$25k – $75k", "$75k+"];
 const types = ["Brand & Design", "Web / App", "AI Automation", "Paid Ads", "Other"];
 
+const contactEndpoint = ["myzonic.com", "www.myzonic.com"].includes(window.location.hostname)
+  ? "https://myzonic-website.vercel.app/api/contact"
+  : "/api/contact";
+
 export default function ContactCTA() {
   const [submitting, setSubmitting] = useState(false);
 
@@ -15,17 +19,19 @@ export default function ContactCTA() {
     setSubmitting(true);
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch(contactEndpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name: data.get("name"),
           email: data.get("email"),
+          phone: data.get("phone"),
           company: data.get("company"),
+          websiteUrl: data.get("websiteUrl"),
           budget: data.get("budget"),
           projectType: data.get("type"),
           message: data.get("message"),
-          website: data.get("website"),
+          faxNumber: data.get("faxNumber"),
         }),
       });
 
@@ -117,12 +123,16 @@ export default function ContactCTA() {
                 <Field label="Email" name="email" type="email" required placeholder="jane@brand.com" />
               </div>
               <div className="grid gap-5 md:grid-cols-2">
+                <Field label="Phone number" name="phone" type="tel" required placeholder="+1 224 555 0123" />
                 <Field label="Company" name="company" placeholder="Acme Inc." />
+              </div>
+              <div className="grid gap-5 md:grid-cols-2">
+                <Field label="Website URL" name="websiteUrl" type="url" placeholder="https://example.com" />
                 <SelectField label="Budget" name="budget" options={budgets} />
               </div>
-              <SelectField label="Project type" name="type" options={types} />
+              <SelectField label="Service interested in" name="type" options={types} required />
               <input
-                name="website"
+                name="faxNumber"
                 tabIndex={-1}
                 autoComplete="off"
                 aria-hidden="true"
@@ -132,6 +142,7 @@ export default function ContactCTA() {
                 <Label>Tell us about your project</Label>
                 <textarea
                   name="message"
+                  aria-label="Tell us about your project"
                   required
                   rows={5}
                   placeholder="Goals, timelines, links - whatever helps us understand the brief."
@@ -167,6 +178,7 @@ function Field({
       <Label>{label}</Label>
       <input
         name={name}
+        aria-label={label}
         type={type}
         required={required}
         placeholder={placeholder}
@@ -175,13 +187,15 @@ function Field({
     </div>
   );
 }
-function SelectField({ label, name, options }: { label: string; name: string; options: string[] }) {
+function SelectField({ label, name, options, required = false }: { label: string; name: string; options: string[]; required?: boolean }) {
   return (
     <div>
       <Label>{label}</Label>
       <select
         name={name}
+        aria-label={label}
         defaultValue=""
+        required={required}
         className="mt-2 w-full rounded-2xl border border-gold-soft bg-[hsl(var(--input))] px-4 py-3 text-sm outline-none transition-colors focus:border-[hsl(var(--gold-2)/0.7)] focus:ring-1 focus:ring-[hsl(var(--gold-2)/0.4)]"
       >
         <option value="" disabled>Select…</option>

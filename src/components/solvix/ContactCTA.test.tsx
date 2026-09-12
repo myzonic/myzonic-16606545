@@ -19,6 +19,12 @@ const fillRequiredFields = () => {
   fireEvent.change(screen.getByPlaceholderText("jane@brand.com"), {
     target: { value: "test@example.com" },
   });
+  fireEvent.change(screen.getByPlaceholderText("+1 224 555 0123"), {
+    target: { value: "+1 224 555 0199" },
+  });
+  fireEvent.change(screen.getByRole("combobox", { name: /service interested in/i }), {
+    target: { value: "Web / App" },
+  });
   fireEvent.change(
     screen.getByPlaceholderText(
       "Goals, timelines, links - whatever helps us understand the brief.",
