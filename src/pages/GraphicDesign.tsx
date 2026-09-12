@@ -146,8 +146,8 @@ export default function GraphicDesign() {
             Whether you need marketing materials, social media graphics, business stationery, packaging, or complete brand assets, our creative team develops professional designs tailored to your goals, your audience, and your brand personality.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-3">
-            <a href="#contact" className="sheen relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-[hsl(var(--primary-foreground))] shadow-[var(--shadow-gold)]">
-              Start Your Project <ArrowUpRight className="h-4 w-4" />
+            <a href="/contact" className="sheen relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-[hsl(var(--primary-foreground))] shadow-[var(--shadow-gold)]">
+              Contact now <ArrowUpRight className="h-4 w-4" />
             </a>
             <a href="#portfolio" className="group inline-flex items-center gap-2 rounded-full border border-gold-soft px-5 py-3 text-sm font-medium text-foreground hover:bg-white/5">
               View Our Work

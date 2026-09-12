@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, Mail, MessageCircle, Phone, Star, MessageSquare } from "lucide-react";
 
 const ctas = [
-  { label: "Contact Us", href: "#contact", icon: <ArrowUpRight className="h-4 w-4" />, primary: true },
-  { label: "Live Chat", href: "#contact", icon: <MessageCircle className="h-4 w-4" /> },
+  { label: "Contact now", href: "/contact", icon: <ArrowUpRight className="h-4 w-4" />, primary: true },
+  { label: "Live Chat", href: "/contact", icon: <MessageCircle className="h-4 w-4" /> },
   { label: "WhatsApp", href: "https://wa.me/12243733224", icon: <Phone className="h-4 w-4" />, external: true },
   { label: "Email", href: "mailto:Contact@myzonic.com", icon: <Mail className="h-4 w-4" /> },
   { label: "Text Message", href: "sms:+12243733224", icon: <MessageSquare className="h-4 w-4" /> },

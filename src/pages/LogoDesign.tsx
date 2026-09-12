@@ -139,8 +139,8 @@ export default function LogoDesign() {
             Whether you're launching a new business, refreshing an existing brand, or rebranding your company, our designers craft logos that are unique, timeless, and designed to work across digital and print media.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-3">
-            <a href="#contact" className="sheen relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-[hsl(var(--primary-foreground))] shadow-[var(--shadow-gold)]">
-              Get Started <ArrowUpRight className="h-4 w-4" />
+            <a href="/contact" className="sheen relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-[hsl(var(--primary-foreground))] shadow-[var(--shadow-gold)]">
+              Contact now <ArrowUpRight className="h-4 w-4" />
             </a>
             <a href="#portfolio" className="group inline-flex items-center gap-2 rounded-full border border-gold-soft px-5 py-3 text-sm font-medium text-foreground hover:bg-white/5">
               View Our Work

@@ -178,14 +178,14 @@ export default function Pricing() {
                 </ul>
 
                 <a
-                  href="#contact"
+                  href="/contact"
                   className={`mt-7 inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-transform hover:-translate-y-0.5 ${
                     p.highlight
                       ? "bg-gold text-[hsl(var(--primary-foreground))] shadow-[var(--shadow-gold)]"
                       : "border border-gold-soft text-foreground hover:bg-white/5"
                   }`}
                 >
-                  Get Started <ArrowUpRight className="h-4 w-4" />
+                  Contact now <ArrowUpRight className="h-4 w-4" />
                 </a>
               </motion.div>
             );
@@ -216,7 +216,7 @@ export default function Pricing() {
               </p>
             </div>
             <a
-              href="#contact"
+              href="/contact"
               className="sheen relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-[hsl(var(--primary-foreground))] shadow-[var(--shadow-gold)]"
             >
               Request a Quote <ArrowUpRight className="h-4 w-4" />

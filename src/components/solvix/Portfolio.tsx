@@ -326,10 +326,10 @@ export default function Portfolio() {
             desc="Real-world projects across therapy, logistics, health, legal, real estate, education, kids and construction. Click any card to preview the live site inside the studio."
           />
           <a
-            href="#contact"
+            href="/contact"
             className="hidden items-center gap-2 rounded-full border border-gold-soft px-5 py-3 text-sm hover:bg-white/5 md:inline-flex"
           >
-            Start a project <ArrowUpRight className="h-4 w-4" />
+            Contact now <ArrowUpRight className="h-4 w-4" />
           </a>
         </div>
 

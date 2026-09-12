@@ -73,7 +73,7 @@ export default function FeaturedSpotlight() {
                   ))}
                 </ul>
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="mt-7 inline-flex items-center gap-2 rounded-full bg-gold px-5 py-3 text-sm font-semibold text-[hsl(var(--primary-foreground))] shadow-[var(--shadow-gold)] transition-transform hover:-translate-y-0.5"
                 >
                   Talk to us <ArrowUpRight className="h-4 w-4" />

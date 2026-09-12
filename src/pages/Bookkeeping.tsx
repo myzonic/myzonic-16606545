@@ -263,8 +263,8 @@ export default function Bookkeeping() {
             <a href="#pricing" className="sheen relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-[hsl(var(--primary-foreground))] shadow-[var(--shadow-gold)]">
               View Pricing <ArrowUpRight className="h-4 w-4" />
             </a>
-            <a href="#contact" className="group inline-flex items-center gap-2 rounded-full border border-gold-soft px-5 py-3 text-sm font-medium text-foreground hover:bg-white/5">
-              Free Consultation
+            <a href="/contact" className="group inline-flex items-center gap-2 rounded-full border border-gold-soft px-5 py-3 text-sm font-medium text-foreground hover:bg-white/5">
+              Contact now
             </a>
           </div>
           <div className="mt-14 grid grid-cols-2 gap-4 border-t border-gold-soft pt-8 md:grid-cols-4">
@@ -369,8 +369,8 @@ export default function Bookkeeping() {
                 <h3 className="font-display text-xl font-bold">Serving Businesses Nationwide</h3>
                 <p className="mt-2 max-w-xl text-sm text-muted-foreground">From coast to coast, our bookkeeping professionals work remotely with businesses of all sizes. We understand the unique financial needs of different regions and industries across the United States.</p>
               </div>
-              <a href="#contact" className="sheen relative inline-flex shrink-0 items-center gap-2 overflow-hidden rounded-full bg-gold px-6 py-3 text-sm font-semibold text-[hsl(var(--primary-foreground))] shadow-[var(--shadow-gold)]">
-                Get Started <ArrowUpRight className="h-4 w-4" />
+              <a href="/contact" className="sheen relative inline-flex shrink-0 items-center gap-2 overflow-hidden rounded-full bg-gold px-6 py-3 text-sm font-semibold text-[hsl(var(--primary-foreground))] shadow-[var(--shadow-gold)]">
+                Contact now <ArrowUpRight className="h-4 w-4" />
               </a>
             </div>
           </div>
@@ -417,8 +417,8 @@ export default function Bookkeeping() {
                 <h3 className="font-display text-xl font-bold">Need Help Migrating?</h3>
                 <p className="mt-2 max-w-xl text-sm text-muted-foreground">Already using another accounting platform? We can help migrate your financial data, organize your chart of accounts, reconcile transactions, and ensure a smooth transition with minimal disruption to your business.</p>
               </div>
-              <a href="#contact" className="sheen relative inline-flex shrink-0 items-center gap-2 overflow-hidden rounded-full bg-gold px-6 py-3 text-sm font-semibold text-[hsl(var(--primary-foreground))] shadow-[var(--shadow-gold)]">
-                Get Help <ArrowUpRight className="h-4 w-4" />
+              <a href="/contact" className="sheen relative inline-flex shrink-0 items-center gap-2 overflow-hidden rounded-full bg-gold px-6 py-3 text-sm font-semibold text-[hsl(var(--primary-foreground))] shadow-[var(--shadow-gold)]">
+                Contact now <ArrowUpRight className="h-4 w-4" />
               </a>
             </div>
           </div>
@@ -454,8 +454,8 @@ export default function Bookkeeping() {
                     </li>
                   ))}
                 </ul>
-                <a href="#contact" className={`mt-7 inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-transform hover:-translate-y-0.5 ${plan.highlight ? "bg-gold text-[hsl(var(--primary-foreground))] shadow-[var(--shadow-gold)]" : "border border-gold-soft text-foreground hover:bg-white/5"}`}>
-                  Get Started <ArrowUpRight className="h-4 w-4" />
+                <a href="/contact" className={`mt-7 inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-transform hover:-translate-y-0.5 ${plan.highlight ? "bg-gold text-[hsl(var(--primary-foreground))] shadow-[var(--shadow-gold)]" : "border border-gold-soft text-foreground hover:bg-white/5"}`}>
+                  Contact now <ArrowUpRight className="h-4 w-4" />
                 </a>
               </div>
             ))}
@@ -498,8 +498,8 @@ export default function Bookkeeping() {
               Schedule your free consultation today and discover how Myzonic can help streamline your finances.
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-              <a href="mailto:hello@myzonic.studio" className="sheen relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-[hsl(var(--primary-foreground))] shadow-[var(--shadow-gold)]">
-                <Mail className="h-4 w-4" /> Schedule Free Consultation
+              <a href="/contact" className="sheen relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-[hsl(var(--primary-foreground))] shadow-[var(--shadow-gold)]">
+                <Mail className="h-4 w-4" /> Contact now
               </a>
               <a href="https://wa.me/16304038612" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-2 rounded-full border border-gold-soft px-5 py-3 text-sm font-medium text-foreground hover:bg-white/5">
                 WhatsApp Us

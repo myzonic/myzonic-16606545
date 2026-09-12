@@ -38,6 +38,7 @@ const serviceContent = import.meta.glob("../content/services/*.md", {
 type ContentBlock =
   | { type: "h2" | "h3" | "p"; text: string }
   | { type: "list"; items: string[] }
+  | { type: "cta" }
   | { type: "rule" };
 
 type ServiceVisual = {
@@ -89,6 +90,12 @@ function parseMarkdown(markdown: string): ContentBlock[] {
       flushParagraph();
       flushList();
       blocks.push({ type: "rule" });
+      continue;
+    }
+    if (line === "**Contact now**") {
+      flushParagraph();
+      flushList();
+      blocks.push({ type: "cta" });
       continue;
     }
     if (line.startsWith("### ")) {
@@ -192,9 +199,9 @@ export default function ServicePage() {
               </div>
               <h1 className="mt-6 font-display text-5xl font-bold leading-[0.98] sm:text-6xl md:text-7xl">{service.title}</h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground md:text-xl">{service.summary}</p>
-              <a href="/#contact" className="sheen mt-9 inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-[hsl(var(--primary-foreground))] shadow-[var(--shadow-gold)] transition-transform hover:-translate-y-0.5">
-                Discuss your project <ArrowUpRight className="h-4 w-4" />
-              </a>
+              <Link to="/contact" className="sheen mt-9 inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-[hsl(var(--primary-foreground))] shadow-[var(--shadow-gold)] transition-transform hover:-translate-y-0.5">
+                Contact now <ArrowUpRight className="h-4 w-4" />
+              </Link>
             </div>
             <ServiceVisualCard visual={visual} />
           </div>
@@ -212,6 +219,7 @@ export default function ServicePage() {
               if (block.type === "h3") return <div key={index} className="flex items-center gap-3 rounded-2xl bg-card/45 px-5 py-4"><span className="h-2 w-2 rounded-full bg-[hsl(var(--gold-3))] shadow-[0_0_14px_hsl(var(--gold-2))]" /><h3 className="text-xl font-semibold md:text-2xl">{block.text}</h3></div>;
               if (block.type === "p") return <p key={index} className="max-w-3xl text-[1.02rem] leading-8 text-muted-foreground"><InlineText text={block.text} /></p>;
               if (block.type === "list") return <ul key={index} className="grid gap-3 sm:grid-cols-2">{block.items.map((item, itemIndex) => <li key={item} className="group rounded-2xl border border-gold-soft bg-card/40 p-4 transition-transform duration-300 hover:-translate-y-1 hover:border-[hsl(var(--gold-2)/0.5)]"><span className="mb-3 grid h-8 w-8 place-items-center rounded-xl bg-gold/10 text-[hsl(var(--gold-3))]"><CheckCircle2 className="h-4 w-4" /></span><span className="block text-sm leading-6 text-muted-foreground"><InlineText text={item} /></span><span className="sr-only">Feature {itemIndex + 1}</span></li>)}</ul>;
+              if (block.type === "cta") return <Link key={index} to="/contact" className="sheen inline-flex w-fit items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-[hsl(var(--primary-foreground))] shadow-[var(--shadow-gold)] transition-transform hover:-translate-y-0.5">Contact now <ArrowUpRight className="h-4 w-4" /></Link>;
               return <div key={index} className="h-px w-full bg-gold-soft" />;
             })}
           </article>
@@ -222,7 +230,7 @@ export default function ServicePage() {
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[hsl(var(--gold-3))]">Let’s build</p>
             <h2 className="mt-3 font-display text-2xl font-bold">Ready to discuss it?</h2>
             <p className="mt-3 text-sm leading-6 text-muted-foreground">Tell us what you need. We’ll help you define a practical next step.</p>
-            <a href="/#contact" className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full border border-gold-soft px-4 py-3 text-sm font-semibold transition-colors hover:bg-white/5">Start a conversation <ArrowUpRight className="h-4 w-4" /></a>
+            <Link to="/contact" className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full border border-gold-soft px-4 py-3 text-sm font-semibold transition-colors hover:bg-white/5">Contact now <ArrowUpRight className="h-4 w-4" /></Link>
           </div></aside>
         </div>
       </section>

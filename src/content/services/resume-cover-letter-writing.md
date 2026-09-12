@@ -249,6 +249,6 @@ Tell us about your career goals, current experience and the type of role you're 
 
 We'll help you create professional career documents that represent you at your best.
 
-**Get Started Today**
+**Contact now**
 
 **Request a Resume & Cover Letter Quote**

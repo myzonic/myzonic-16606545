@@ -171,8 +171,8 @@ export default function WebsiteDesign() {
             Whether you're a startup, small business, or established company, we create custom websites tailored to your goals, industry, and audience. Every website we build is responsive, SEO optimized, secure, and designed to deliver an outstanding user experience.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-3">
-            <a href="#contact" className="sheen relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-[hsl(var(--primary-foreground))] shadow-[var(--shadow-gold)]">
-              Start Your Project <ArrowUpRight className="h-4 w-4" />
+            <a href="/contact" className="sheen relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-[hsl(var(--primary-foreground))] shadow-[var(--shadow-gold)]">
+              Contact now <ArrowUpRight className="h-4 w-4" />
             </a>
             <a href="#portfolio" className="group inline-flex items-center gap-2 rounded-full border border-gold-soft px-5 py-3 text-sm font-medium text-foreground hover:bg-white/5">
               View Our Work
@@ -461,8 +461,8 @@ export default function WebsiteDesign() {
               Whether you're starting from scratch or giving your existing website a fresh new direction, we're here to bring your vision to life.
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-              <a href="mailto:Contact@myzonic.com" className="sheen relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-[hsl(var(--primary-foreground))] shadow-[var(--shadow-gold)]">
-                <Mail className="h-4 w-4" /> Start Your Project
+              <a href="/contact" className="sheen relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-[hsl(var(--primary-foreground))] shadow-[var(--shadow-gold)]">
+                <Mail className="h-4 w-4" /> Contact now
               </a>
               <a href="tel:+12243733224" className="group inline-flex items-center gap-2 rounded-full border border-gold-soft px-5 py-3 text-sm font-medium text-foreground hover:bg-white/5">
                 Call Us

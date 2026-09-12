@@ -306,7 +306,7 @@ export default function TrustBadges() {
             We completely understand. Trust isn't something that's given right away. It's something that's earned. If paying upfront is the only thing making you hesitate, we're happy to show you an initial concept or a preview of the work before asking for any payment. We want you to see the quality of our work first and feel confident that you've chosen the right team. Our goal is to make the entire experience straightforward, honest, and comfortable from the very beginning. When you feel confident in the work, you can move forward with complete peace of mind.
           </p>
           <a
-            href="#contact"
+            href="/contact"
             className="sheen relative mt-8 inline-flex items-center gap-2 overflow-hidden rounded-full bg-gold px-6 py-3.5 text-sm font-semibold text-[hsl(var(--primary-foreground))] shadow-[var(--shadow-gold)] transition-transform hover:-translate-y-0.5"
           >
             Get a Free Preview
