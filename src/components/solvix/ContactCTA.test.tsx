@@ -60,6 +60,7 @@ describe("ContactCTA", () => {
     expect(mocks.fetch.mock.calls[0][1]?.body).toContain('"budget":"$1,500"');
     expect(mocks.success).toHaveBeenCalledOnce();
     expect(screen.getByPlaceholderText("Jane Cooper")).toHaveValue("");
+    expect(screen.getByRole("status")).toHaveTextContent("Thanks for contacting Myzonic!");
   });
 
   it("keeps the form contents and displays an error when delivery fails", async () => {
@@ -72,5 +73,6 @@ describe("ContactCTA", () => {
     await waitFor(() => expect(mocks.error).toHaveBeenCalledOnce());
     expect(mocks.success).not.toHaveBeenCalled();
     expect(screen.getByPlaceholderText("Jane Cooper")).toHaveValue("Test Person");
+    expect(screen.queryByRole("status")).not.toBeInTheDocument();
   });
 });

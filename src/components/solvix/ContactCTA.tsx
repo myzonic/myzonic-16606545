@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowUpRight, Mail, Phone, Clock, MapPin } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, Mail, Phone, Clock, MapPin } from "lucide-react";
 import { toast } from "sonner";
 
 const budgets = [
@@ -25,11 +25,13 @@ const contactEndpoint = ["myzonic.com", "www.myzonic.com"].includes(window.locat
 
 export default function ContactCTA() {
   const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
+    setSubmitted(false);
     setSubmitting(true);
 
     try {
@@ -51,10 +53,12 @@ export default function ContactCTA() {
       if (!response.ok) throw new Error("Contact email delivery failed");
 
       form.reset();
+      setSubmitted(true);
       toast.success("Thanks - we'll be in touch within 24h.", {
         description: "A senior strategist will personally reply to your brief.",
       });
     } catch {
+      setSubmitted(false);
       toast.error("We couldn't send your message.", {
         description: "Please try again or email Contact@myzonic.com directly.",
       });
@@ -173,6 +177,21 @@ export default function ContactCTA() {
               >
                 {submitting ? "Sending…" : "Send brief"} <ArrowUpRight className="h-4 w-4" />
               </button>
+              {submitted && (
+                <div
+                  role="status"
+                  aria-live="polite"
+                  className="flex items-start gap-3 rounded-2xl border border-emerald-400/30 bg-emerald-500/10 px-4 py-4 text-emerald-100"
+                >
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" />
+                  <div>
+                    <p className="font-semibold">Thanks for contacting Myzonic!</p>
+                    <p className="mt-1 text-sm text-emerald-100/75">
+                      Your project brief has been received. Our team will reply within 24 hours.
+                    </p>
+                  </div>
+                </div>
+              )}
               <p className="text-center text-xs text-muted-foreground">
                 By sending, you agree to be contacted by our team. We never share your details.
               </p>
