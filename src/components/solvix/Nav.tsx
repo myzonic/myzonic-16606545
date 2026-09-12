@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { ArrowUpRight, ChevronDown, Facebook, Instagram, Linkedin, Menu, Moon, Sparkles, Sun, X } from "lucide-react";
+import { ArrowUpRight, ChevronDown, Facebook, Instagram, Linkedin, Menu, Moon, Sun, X } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -91,7 +91,7 @@ export default function Nav() {
               {(isHome ? homeLinks : [{ href: "/", label: "Home" }]).map((link) => <a key={link.href} href={link.href.startsWith("#") ? homeHref(link.href) : link.href} onClick={() => setOpen(false)} className="rounded-2xl px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-white/5">{link.label}</a>)}
             </div>
             <div className="mt-4 rounded-2xl border border-gold-soft bg-card/50 p-3">
-              <div className="mb-2 flex items-center gap-2 px-2 text-xs font-semibold uppercase tracking-[0.16em] text-[hsl(var(--gold-3))]"><Sparkles className="h-3.5 w-3.5" /> Explore services</div>
+              <div className="mb-2 px-2 text-xs font-semibold uppercase tracking-[0.16em] text-[hsl(var(--gold-3))]">Explore services</div>
               <div className="grid gap-1 sm:grid-cols-2">
                 {featuredPages.map((page) => <MobilePageLink key={page.to} {...page} active={location.pathname === page.to} />)}
                 {servicePages.map((service) => <MobilePageLink key={service.slug} to={`/services/${service.slug}`} label={service.title} active={location.pathname === `/services/${service.slug}`} />)}

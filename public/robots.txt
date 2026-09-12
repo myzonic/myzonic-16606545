@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
+Allow: /services/
 Disallow: /api/
 
+# All public pages, including service pages, are listed here for search crawlers.
 Sitemap: https://myzonic.com/sitemap.xml
